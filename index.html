@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Travels</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Full-page video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Hero section styling */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5); /* Overlay for better text visibility */
+        }
+        .hero h1 {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            opacity: 0;
+            animation: fadeInOut 10s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 1; }
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        /* About section with image background */
+        .about-section {
+            padding: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-image: url('about-background1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            position: relative;
+            z-index: 1;
+            height: 60vh;
+        }
+        .about-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 2em;
+        }
+        .about-section div {
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text */
+            padding: 1em;
+            border-radius: 8px;
+        }
+        .about-section h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+        /* Another section with different background image */
+        .second-background {
+            padding: 2em;
+            background-image: url('about-background2.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            height: 60vh;
+        }
+        /* Contact section styling */
+        .contact {
+            text-align: center;
+            padding: 2em;
+            background-color: #333;
+        }
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+        .contact .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+        .contact button {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007BFF;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact button:hover {
+            background-color: #0056b3;
+        }
+        .contact .button2 {
+            margin-top: 1em;
+        }
+        .contact .email {
+            margin: 1.5em 0;
+            font-size: 1.2em;
+        }
+        .contact .instagram {
+            margin-top: 1.5em;
+        }
+        .contact .instagram img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+        @media (max-width: 768px) {
+            .about-section, .second-background {
+                height: auto;
+            }
+            .about-section img {
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Full-page video background -->
+    <video class="video-background" src="travel_video.mp4" autoplay muted loop></video>
+    <!-- Welcome Section -->
+    <section class="hero">
+        <div>
+            <h1> WELCOME TO ADITYA TRAVELS..!! </h1>
+            <p>At Aditya Travels, we pride ourselves on offering tailored transportation solutions 
+                to meet the diverse needs of our clients. <br>
+                 Whether you’re organizing a corporate event or planning a special occasion,
+                  <br> we have you covered with our dedicated services.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <img src="downloadkia.jpg" alt="About Us Image">
+        <div>
+            <h2>About Us</h2>
+            <p>Established in 2005, we take pride in being a leading tour and travel company based in Pune, 
+                India, with a rich history spanning over 19 years. Since our inception, 
+                we have been committed to providing exceptional travel experiences to our clients.</p>
+        </div>
+    </section>
+
+    <!-- Another Section with Different Background -->
+    <section class="second-background">
+        <img src="swift.jpg" alt="About Us Image">
+        <h2>Explore More</h2>
+        <p>Discover more about our unique offerings and the beautiful destinations we cover. 
+            <br> Our services are designed to make your travel experiences unforgettable.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: 8369757676 | 8655585479</p>
+        <p class="email">Email: adityatravels8429@gmail.com</p>
+        <div class="buttons">
+            <button onclick="window.location.href='tel:8369757676'">BOOK FROM PUNE</button>
+            <button onclick="window.location.href='tel:8369757676'">BOOK FROM MUMBAI</button>
+            <button onclick="window.location.href='tel:8369757676'">BOOK FOR OUTSTATION</button>
+        </div>
+        
+        <div class="instagram">
+            Share Us:
+            <a href="https://www.instagram.com/_aditya.travels8429?igsh=MWprMXhvNGhnMnBwdg==" target="_blank">
+            <img src="insta.jpg" alt="Instagram Logo">
+            </a>
+            <a href="wa.me/qr/30X2H55NOX5701" target="_blank">
+                <img src="whatsapp.png" alt="whatsapp Logo">
+                </a>
+        </div>
+    </section>
+</body>
+</html>
